@@ -276,7 +276,15 @@
     "parkingPing": "10.5",
     "mgmtFee": "1168",
     "realPrice": "",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273004378_0.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273006029_1.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273007442_2.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273008993_3.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273010474_4.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273011956_5.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/07_1786273013419_6.jpg"
+    ],
     "pros": [
       "坡道平面車位",
       "生活機能極佳",
@@ -292,7 +300,8 @@
     "lat": "25.18360",
     "lng": "121.43800",
     "sourceUrl": "",
-    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）"
+    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）",
+    "recordDate": ""
   },
   {
     "code": "#08",
