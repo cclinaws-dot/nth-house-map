@@ -532,8 +532,10 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    const GITHUB_REPO = "cclinaws-dot/tamsui-house-map";
+    const GITHUB_REPO = "cclinaws-dot/nth-house-map";
     const GITHUB_FILE_PATH = "data.json";
+    // 快取 key 綁定目前的 repo 名稱，換 repo 時不會看到舊 repo 殘留的 LocalStorage 快取
+    const CACHE_KEY = `house_map_cache_${GITHUB_REPO.replace('/', '_')}`;
 
     let properties = [];
     let fileSHA = "";
@@ -886,7 +888,7 @@
         }
 
         // 先優先讀取 LocalStorage 快取，瞬間顯示內容
-        const localData = localStorage.getItem('淡水看房地圖資料');
+        const localData = localStorage.getItem(CACHE_KEY);
         if (localData) {
             try { properties = JSON.parse(localData); } catch(e){}
         }
@@ -906,7 +908,7 @@
 
             // 重要：LocalStorage 容量通常只有 5~10MB，若照片累積過多可能寫入失敗。
             // 這裡刻意獨立 try/catch，避免快取寫入失敗被誤判成「雲端連線失敗」。
-            const cacheOk = safeLocalStorageSet('淡水看房地圖資料', JSON.stringify(properties));
+            const cacheOk = safeLocalStorageSet(CACHE_KEY, JSON.stringify(properties));
 
             if (!cacheOk) {
                 statusEl.innerText = "🟡 雲端同步正常，但本機快取容量已滿（建議精簡照片數量）";
@@ -930,7 +932,7 @@
         const statusEl = document.getElementById('syncStatus');
 
         // 用安全寫入，就算本機快取容量已滿，也不影響接下來真正要做的雲端同步
-        const cacheOk = safeLocalStorageSet('淡水看房地圖資料', JSON.stringify(properties));
+        const cacheOk = safeLocalStorageSet(CACHE_KEY, JSON.stringify(properties));
         if (!cacheOk) {
             console.warn("本機快取寫入失敗（容量已滿），將僅嘗試同步至 GitHub 雲端。");
         }
