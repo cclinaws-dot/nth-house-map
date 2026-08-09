@@ -171,6 +171,10 @@
                         <input type="text" id="code" placeholder="例: #01" required>
                     </div>
                     <div class="form-group">
+                        <label>📅 紀錄日期</label>
+                        <input type="date" id="recordDate">
+                    </div>
+                    <div class="form-group">
                         <label>評估狀態</label>
                         <select id="status" onchange="handleStatusChange('new')">
                             <option value="🌐 網路收藏 (待約看)" selected>🌐 網路收藏 (待約看)</option>
@@ -360,7 +364,7 @@
                 </div>
 
                 <div class="form-group" style="margin-top:8px;">
-                    <label>📷 上傳現場照片/截圖 (可選取最多 12 張)</label>
+                    <label>📷 上傳現場照片/截圖 (可選取最多 15 張)</label>
                     <input type="file" id="imageInput" accept="image/*" multiple onchange="handleImageUpload(event, 'new')">
                     <div class="image-preview-grid" id="newImagePreviewGrid"></div>
                 </div>
@@ -497,6 +501,7 @@
                             <th>主+附坪數</th>
                             <th>車位坪數</th>
                             <th>屋齡(年)</th>
+                            <th>紀錄日期</th>
                             <th>圖片</th>
                         </tr>
                     </thead>
@@ -756,6 +761,16 @@
     function updateAutoCodeField() {
         const codeInput = document.getElementById('code');
         if (codeInput) codeInput.value = getNextAutoCode();
+
+        // 紀錄日期預設帶入今天，使用者仍可自行修改
+        const dateInput = document.getElementById('recordDate');
+        if (dateInput && !dateInput.value) {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
     }
 
     function handleStatusChange(mode) {
@@ -1145,6 +1160,7 @@
                     <td>${p.innerPing ? p.innerPing + '坪' : '-'}</td>
                     <td>${p.parkingPing ? p.parkingPing + '坪' : '-'}</td>
                     <td>${p.age ? p.age + '年' : '-'}</td>
+                    <td>${p.recordDate || '-'}</td>
                     <td>${imgDisplay}</td>
                 </tr>
             `;
@@ -1194,7 +1210,7 @@
 
         // 照片現在會各自上傳成雲端圖檔（不再塞進 data.json），
         // 所以上限可以放寬一些，data.json 依然能保持很小、同步快速。
-        const MAX_IMAGES = 12;
+        const MAX_IMAGES = 15;
         if (targetArray.length + files.length > MAX_IMAGES) {
             alert(`照片上限為 ${MAX_IMAGES} 張，已自動選取可放入的張數！`);
         }
@@ -1445,6 +1461,7 @@
                 <div><b>預估成交總價：</b> ${p.targetPrice || '未評估'}</div>
                 <div><b>實價登錄行情：</b> ${p.realPrice || '未提供'}</div>
                 <div><b>屋齡：</b> ${p.age ? p.age + ' 年' : '未填'}</div>
+                <div><b>📅 紀錄日期：</b> ${p.recordDate || '未填'}</div>
                 <div><b>預估管理費：</b> ${p.mgmtFee ? p.mgmtFee + ' 元/月' : '未填'}</div>
                 <div><b>權狀總坪數：</b> ${p.totalPing} 坪</div>
                 <div><b>主+附 (室內)：</b> ${p.innerPing} 坪</div>
@@ -1525,6 +1542,7 @@
         document.getElementById('modalBody').innerHTML = `
             <div class="form-grid">
                 <div class="form-group"><label>編號</label><input type="text" id="e_code" value="${p.code || ''}"></div>
+                <div class="form-group"><label>📅 紀錄日期</label><input type="date" id="e_recordDate" value="${p.recordDate || ''}"></div>
                 <div class="form-group">
                     <label>評估狀態</label>
                     <select id="e_status" onchange="handleStatusChange('edit')">
@@ -1644,7 +1662,7 @@
             <input type="hidden" id="e_lng" value="${p.lng || ''}">
 
             <div class="form-group" style="margin-top:10px;">
-                <label>📷 管理物件照片 (最多 12 張)</label>
+                <label>📷 管理物件照片 (最多 15 張)</label>
                 <input type="file" id="editImageInput" accept="image/*" multiple onchange="handleImageUpload(event, 'edit')">
                 <div class="image-preview-grid" id="editImagePreviewGrid"></div>
             </div>
@@ -1710,6 +1728,7 @@
         );
 
         properties[index].code = document.getElementById('e_code').value;
+        properties[index].recordDate = document.getElementById('e_recordDate').value;
         properties[index].rating = document.getElementById('e_rating').value;
         properties[index].name = document.getElementById('e_name').value;
         properties[index].address = document.getElementById('e_address').value;
@@ -1769,6 +1788,7 @@
         
         const newP = {
             code: document.getElementById('code').value,
+            recordDate: document.getElementById('recordDate').value,
             rating: document.getElementById('rating').value,
             name: document.getElementById('name').value,
             address: document.getElementById('address').value,
@@ -1828,13 +1848,13 @@
 
     function exportCSV() {
         let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
-        csvContent += "導覽圖編號,綜合評分(星級),物件名稱,開價總價(萬),格局,登記用途,型態,樓層,實價登錄行情(萬/坪),權狀總坪數,主加附坪數,車位坪數,屋齡(年),換算開價單價(萬/坪),照片數量,評估狀態,地址,來源網址,聯絡資訊,車位類型,朝向,預估成交總價(萬),管理費(元/月),優點亮點,抗性缺點,備註,緯度,經度\n";
+        csvContent += "導覽圖編號,紀錄日期,綜合評分(星級),物件名稱,開價總價(萬),格局,登記用途,型態,樓層,實價登錄行情(萬/坪),權狀總坪數,主加附坪數,車位坪數,屋齡(年),換算開價單價(萬/坪),照片數量,評估狀態,地址,來源網址,聯絡資訊,車位類型,朝向,預估成交總價(萬),管理費(元/月),優點亮點,抗性缺點,備註,緯度,經度\n";
         
         properties.forEach(p => {
             const imgCount = p.images ? p.images.length + '張' : '0張';
             const rVal = parseInt(p.rating) || 0;
             const starText = rVal > 0 ? rVal + '星' : '無';
-            csvContent += `"${p.code}","${starText}","${p.name}","${p.price}","${p.layout || ''}","${p.purpose || ''}","${p.type || ''}","${p.floor || ''}","${p.realPrice || ''}","${p.totalPing || ''}","${p.innerPing || ''}","${p.parkingPing || ''}","${p.age || ''}","${p.unitPrice || ''}","${imgCount}","${p.status}","${p.address || ''}","${p.sourceUrl || ''}","${p.contactInfo || ''}","${p.parkingType || ''}","${p.orientation || ''}","${p.targetPrice || ''}","${p.mgmtFee || ''}","${(p.pros||[]).join(';')}","${(p.cons||[]).join(';')}","${p.notes}","${p.lat}","${p.lng}"\n`;
+            csvContent += `"${p.code}","${p.recordDate || ''}","${starText}","${p.name}","${p.price}","${p.layout || ''}","${p.purpose || ''}","${p.type || ''}","${p.floor || ''}","${p.realPrice || ''}","${p.totalPing || ''}","${p.innerPing || ''}","${p.parkingPing || ''}","${p.age || ''}","${p.unitPrice || ''}","${imgCount}","${p.status}","${p.address || ''}","${p.sourceUrl || ''}","${p.contactInfo || ''}","${p.parkingType || ''}","${p.orientation || ''}","${p.targetPrice || ''}","${p.mgmtFee || ''}","${(p.pros||[]).join(';')}","${(p.cons||[]).join(';')}","${p.notes}","${p.lat}","${p.lng}"\n`;
         });
 
         const encodedUri = encodeURI(csvContent);
