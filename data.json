@@ -357,7 +357,7 @@
     "type": "社區大樓",
     "parkingType": "坡道平面",
     "orientation": "朝東/東南",
-    "status": "🌐 網路收藏 (待約看)",
+    "status": "🟡 保留觀察",
     "price": "1088",
     "unitPrice": "29.48",
     "targetPrice": "",
@@ -368,7 +368,23 @@
     "parkingPing": "8.5",
     "mgmtFee": "1946",
     "realPrice": "",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274064464_0.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274066475_1.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274068241_2.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274070092_3.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274071780_4.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274073561_5.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274074952_6.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274076400_7.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274077982_8.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274079404_9.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274080875_10.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274082297_11.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274083861_12.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274085248_13.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/09_1786274087090_14.jpg"
+    ],
     "pros": [
       "景觀極佳/棟距大",
       "24H管理/垃圾集中"
@@ -382,7 +398,8 @@
     "lat": "25.18750",
     "lng": "121.42850",
     "sourceUrl": "",
-    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）"
+    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）",
+    "recordDate": "2026-08-08"
   },
   {
     "code": "#10",
