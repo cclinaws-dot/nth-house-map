@@ -411,7 +411,7 @@
     "type": "社區大樓",
     "parkingType": "無車位",
     "orientation": "朝北/東北",
-    "status": "🟢 優先考慮",
+    "status": "🟡 保留觀察",
     "price": "988",
     "unitPrice": "42.15",
     "targetPrice": "",
@@ -452,7 +452,7 @@
     "lng": "121.44250",
     "sourceUrl": "",
     "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）",
-    "recordDate": ""
+    "recordDate": "2026-08-08"
   },
   {
     "code": "#11",
