@@ -114,7 +114,20 @@
     "parkingPing": "5.2",
     "mgmtFee": "1000",
     "realPrice": "28 ~ 32 萬/坪",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272777684_0.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272780161_1.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272781570_2.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272783060_3.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272784592_4.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272786512_5.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272787977_6.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272789538_7.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272791400_8.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272792875_9.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272794321_10.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/03_1786272796448_11.jpg"
+    ],
     "pros": [
       "採光明亮/通風佳",
       "低公設比/室內大"
@@ -127,7 +140,8 @@
     "lat": "25.18323",
     "lng": "121.43598",
     "sourceUrl": "",
-    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）"
+    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）",
+    "recordDate": ""
   },
   {
     "code": "#04",
