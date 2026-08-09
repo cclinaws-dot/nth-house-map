@@ -265,13 +265,18 @@
 
                     <div class="form-group">
                         <label>房屋朝向 (主要採光面)</label>
-                        <select id="orientation">
-                            <option value="朝南/西南">☀️ 朝南 / 西南 (溫暖採光佳)</option>
-                            <option value="朝東/東南">🌅 朝東 / 東南 (順採光)</option>
-                            <option value="朝北/東北">❄️ 朝北 / 東北</option>
-                            <option value="朝西/西北">🌇 朝西 / 西北 (注意西曬)</option>
+                        <input type="text" id="orientation" list="orientationOptions" placeholder="例: 朝南、朝東北、正東 等，可自行輸入">
+                        <datalist id="orientationOptions">
+                            <option value="朝南">☀️ 朝南</option>
+                            <option value="朝北">❄️ 朝北</option>
+                            <option value="朝東">🌅 朝東</option>
+                            <option value="朝西">🌇 朝西</option>
+                            <option value="朝東南">🌅 朝東南</option>
+                            <option value="朝東北">❄️ 朝東北</option>
+                            <option value="朝西南">☀️ 朝西南</option>
+                            <option value="朝西北">🌇 朝西北 (注意西曬)</option>
                             <option value="未知">❓ 未知</option>
-                        </select>
+                        </datalist>
                     </div>
 
                     <div class="form-group">
@@ -1615,13 +1620,7 @@
                 </div>
 
                 <div class="form-group"><label>朝向</label>
-                    <select id="e_orientation">
-                        <option value="朝南/西南" ${p.orientation==='朝南/西南'?'selected':''}>☀️ 朝南/西南</option>
-                        <option value="朝東/東南" ${p.orientation==='朝東/東南'?'selected':''}>🌅 朝東/東南</option>
-                        <option value="朝北/東北" ${p.orientation==='朝北/東北'?'selected':''}>❄️ 朝北/東北</option>
-                        <option value="朝西/西北" ${p.orientation==='朝西/西北'?'selected':''}>🌇 朝西/西北</option>
-                        <option value="未知" ${p.orientation==='未知'?'selected':''}>❓ 未知</option>
-                    </select>
+                    <input type="text" id="e_orientation" list="orientationOptions" value="${p.orientation || ''}" placeholder="例: 朝南、朝東北、正東 等，可自行輸入">
                 </div>
                 <div class="form-group"><label>樓層</label><input type="text" id="e_floor" value="${p.floor || ''}"></div>
 
