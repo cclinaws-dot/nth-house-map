@@ -313,7 +313,7 @@
     "type": "華廈",
     "parkingType": "坡道平面",
     "orientation": "未知",
-    "status": "🔴 直接排除",
+    "status": "🟡 保留觀察",
     "price": "898",
     "unitPrice": "28.21",
     "targetPrice": "",
@@ -324,7 +324,16 @@
     "parkingPing": "11.1",
     "mgmtFee": "2092",
     "realPrice": "",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273441672_0.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273443127_1.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273444781_2.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273446515_3.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273448026_4.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273449717_5.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273451560_6.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/08_1786273453091_7.jpg"
+    ],
     "pros": [
       "屋況維持佳免大整理",
       "近捷運/輕軌/公車站",
@@ -335,7 +344,8 @@
     "lat": "25.18365",
     "lng": "121.43790",
     "sourceUrl": "",
-    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）"
+    "contactInfo": "齊孝德 0938095175（有巢氏房屋 淡水義山站前加盟店）",
+    "recordDate": "2026-08-08"
   },
   {
     "code": "#09",
