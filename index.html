@@ -334,7 +334,10 @@
                     <div class="form-group full" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0;">
                         <div class="form-group">
                             <label>實價登錄行情 (萬/坪)</label>
-                            <input type="text" id="realPrice" placeholder="例: 30 ~ 33 萬/坪" oninput="autoCalcTargetPrice('new')">
+                            <div style="display:flex; gap:6px;">
+                                <input type="text" id="realPrice" placeholder="例: 30 ~ 33 萬/坪" oninput="autoCalcTargetPrice('new')" style="flex:1;">
+                                <button type="button" onclick="queryRealPrice('new')" class="btn" style="padding:6px 10px; font-size:0.78rem; white-space:nowrap;" title="開新分頁查詢此地址的實價登錄">🔍 查詢</button>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>預估成交總價 (萬元) ⚡自動計算</label>
@@ -1024,6 +1027,25 @@
         unitPriceEl.value = (price / ping).toFixed(2);
     }
 
+    // 開新分頁查詢該地址/社區名稱的實價登錄行情，方便比對填入 realPrice 欄位
+    function queryRealPrice(mode) {
+        const addressId = mode === 'new' ? 'address' : 'e_address';
+        const nameId = mode === 'new' ? 'name' : 'e_name';
+        const address = (document.getElementById(addressId)?.value || '').trim();
+        const name = (document.getElementById(nameId)?.value || '').trim();
+        const keyword = address || name;
+
+        if (!keyword) {
+            alert('請先填寫地址或社區/物件名稱，再查詢實價登錄！');
+            return;
+        }
+
+        // 官方「內政部不動產交易實價查詢服務網」首頁 + Google 搜尋雙開，方便交叉比對
+        window.open('https://lvr.land.moi.gov.tw/', '_blank');
+        const query = encodeURIComponent(`${keyword} 實價登錄`);
+        window.open(`https://www.google.com/search?q=${query}`, '_blank');
+    }
+
     function autoCalcTargetPrice(mode) {
         const pingId = mode === 'new' ? 'totalPing' : 'e_totalPing';
         const realPriceId = mode === 'new' ? 'realPrice' : 'e_realPrice';
@@ -1642,7 +1664,12 @@
                 </div>
 
                 <div class="form-group full" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0;">
-                    <div class="form-group"><label>實價登錄行情 (萬/坪)</label><input type="text" id="e_realPrice" value="${p.realPrice || ''}" oninput="autoCalcTargetPrice('edit')"></div>
+                    <div class="form-group"><label>實價登錄行情 (萬/坪)</label>
+                        <div style="display:flex; gap:6px;">
+                            <input type="text" id="e_realPrice" value="${p.realPrice || ''}" oninput="autoCalcTargetPrice('edit')" style="flex:1;">
+                            <button type="button" onclick="queryRealPrice('edit')" class="btn" style="padding:6px 10px; font-size:0.78rem; white-space:nowrap;" title="開新分頁查詢此地址的實價登錄">🔍 查詢</button>
+                        </div>
+                    </div>
                     <div class="form-group"><label>預估成交總價 (萬) ⚡自動計算</label><input type="text" id="e_targetPrice" value="${p.targetPrice || ''}"></div>
                 </div>
 
