@@ -118,7 +118,7 @@
     "type": "華廈",
     "parkingType": "升降機械",
     "orientation": "朝南/西南",
-    "status": "🟡 保留觀察",
+    "status": "🔴 直接排除",
     "price": "830",
     "unitPrice": "33.07",
     "targetPrice": "703 ~ 803 萬",
