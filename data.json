@@ -718,9 +718,9 @@
   {
     "code": "#17",
     "recordDate": "2026-08-09",
-    "rating": "0",
+    "rating": "3",
     "name": "淡海國小學(學區房)有囍夕陽海景兩房平車",
-    "address": "",
+    "address": "新北市淡水區新市二路二段8號10樓之1",
     "sourceUrl": "https://community.rakuya.com.tw/18034/sell/info?ehid=05d133339388700&from=communityInfoSell",
     "contactInfo": "",
     "layout": "2房1廳1衛",
@@ -728,16 +728,16 @@
     "type": "社區大樓",
     "parkingType": "坡道平面",
     "orientation": "坐東南朝西北",
-    "status": "🌐 網路收藏 (待約看)",
-    "price": "1098",
-    "unitPrice": "33.76",
+    "status": "🟡 保留觀察",
+    "price": "988",
+    "unitPrice": "30.37",
     "targetPrice": "",
-    "floor": "10F/13F",
-    "age": "10.8",
-    "totalPing": "32.52",
+    "floor": "10F/13F (151戶)",
+    "age": "10.9",
+    "totalPing": "32.53",
     "innerPing": "14.27",
     "parkingPing": "8.91",
-    "mgmtFee": "",
+    "mgmtFee": "1917",
     "realPrice": "",
     "images": [
       "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/17_1786288521315_0.jpg",
@@ -751,11 +751,16 @@
       "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/17_1786288532699_8.jpg",
       "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/17_1786288533780_9.jpg"
     ],
-    "pros": [],
-    "cons": [],
+    "pros": [
+      "兩房採光不錯"
+    ],
+    "cons": [
+      "1.主臥跟浴缸那面牆—有防水層失效的漏水跡象。 2.進門就是客廳電視櫃",
+      "廚房跟客廳間有做拉門隔間 導致若關拉門採光不好（隔局有點怪）。"
+    ],
     "notes": "",
-    "lat": "25.19142",
-    "lng": "121.44337"
+    "lat": "25.19548",
+    "lng": "121.42651"
   },
   {
     "code": "#18",
