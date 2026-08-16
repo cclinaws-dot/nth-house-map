@@ -1049,7 +1049,7 @@
   {
     "code": "#25",
     "recordDate": "2026-08-11",
-    "rating": "0",
+    "rating": "1",
     "name": "江南大宅|17樓海景美兩房",
     "address": "淡水 江南大宅",
     "sourceUrl": "https://www.facebook.com/share/p/1Br8MBxiDp/",
@@ -1083,8 +1083,8 @@
     "pros": [],
     "cons": [],
     "notes": "陽台過小，洗衣機需放廚房",
-    "lat": 25.0478,
-    "lng": 121.517
+    "lat": "25.0478",
+    "lng": "121.517"
   },
   {
     "code": "#26",
