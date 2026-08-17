@@ -1245,5 +1245,53 @@
     "notes": "據說管理嚴謹",
     "lat": "25.16225",
     "lng": "121.45719"
+  },
+  {
+    "code": "#30",
+    "recordDate": "2026-08-17",
+    "rating": "4",
+    "name": "和合真善美・幸福真完美",
+    "address": "",
+    "sourceUrl": "https://www.sinyi.com.tw/buy/Hhouse/8990QZ/480280",
+    "contactInfo": "",
+    "layout": "2房2廳1衛",
+    "purpose": "住家用",
+    "type": "社區大樓",
+    "parkingType": "坡道平面",
+    "orientation": "落地窗朝北",
+    "status": "🌐 網路收藏 (待約看)",
+    "price": "1168",
+    "unitPrice": "35.09",
+    "targetPrice": "",
+    "floor": "13F/13F",
+    "age": "19.2",
+    "totalPing": "33.29",
+    "innerPing": "17.93",
+    "parkingPing": "8.74",
+    "mgmtFee": "1664",
+    "realPrice": "",
+    "images": [
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965631126_0.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965632740_1.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965634178_2.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965635814_3.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965637092_4.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965638863_5.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965640436_6.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965642031_7.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965643186_8.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965644747_9.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965645777_10.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965647163_11.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965648302_12.jpg",
+      "https://raw.githubusercontent.com/cclinaws-dot/nth-house-map/main/images/30_1786965649444_13.jpg"
+    ],
+    "pros": [
+      "車位 1個坡道平面(車位總價：150萬)"
+    ],
+    "cons": [],
+    "notes": "",
+    "lat": 25.0478,
+    "lng": 121.517
   }
 ]
