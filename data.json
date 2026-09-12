@@ -1546,7 +1546,7 @@
   {
     "code": "#41",
     "recordDate": "2026-09-12",
-    "rating": "5",
+    "rating": "4",
     "name": "淡水新市鎮 宏普樂高（夾層屋，屋況算不錯）",
     "address": "新北市淡水區新市二路一段116號",
     "sourceUrl": "https://www.ycut.com.tw/case-info/87f7fd55-43e0-4bae-86c0-4686ae6515f6",
@@ -1556,7 +1556,7 @@
     "type": "社區大樓",
     "parkingType": "坡道平面",
     "orientation": "坐北朝南",
-    "status": "🟡 保留觀察",
+    "status": "🟢 優先考慮",
     "price": "928",
     "unitPrice": "27.06",
     "targetPrice": "",
