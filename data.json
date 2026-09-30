@@ -1750,8 +1750,8 @@
     "parkingType": "坡道平面",
     "orientation": "坐西北朝東南",
     "status": "🟢 優先考慮",
-    "price": "",
-    "unitPrice": "",
+    "price": "1118",
+    "unitPrice": "47.94",
     "targetPrice": "",
     "floor": "18F/22F",
     "age": "",
@@ -1764,7 +1764,7 @@
     "pros": [],
     "cons": [],
     "notes": "",
-    "lat": 25.0478,
-    "lng": 121.517
+    "lat": "25.0478",
+    "lng": "121.517"
   }
 ]
